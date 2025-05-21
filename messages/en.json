@@ -1,0 +1,176 @@
+{
+  "Home": {
+    "servanda": "Servanda",
+    "servandaMotto": "Fast law, made simple. For everyone."
+  },
+  "AboutUs": {
+    "aboutUs": "About us",
+    "aboutUsDescription": "Get to know us",
+    "aboutUsOverview": "Our team consists of four talented men with backgrounds in law, machine learning, and information technology.",
+    "brorDescription": "Bror Dahle is a co-founder, COO and CLO of Servanda, where he manages daily operations, handles contracts, financing and recruitment. With a solid background in psychology and law, he brings analytical precision and legal insight to the company. He is pursuing a professional degree in psychology and a master's degree in law, while working as a case officer at the Norwegian Board of Health Supervision, where he ensures thorough assessments in complex cases. His broad expertise contributes to both strategic growth and legal security in Servanda.",
+    "andreasDescription": "Andreas Massey is a co-founder, CEO and CTO of Servanda, where he leads both the company's strategic direction and technological development. He combines his expertise in cognitive neuroscience and machine learning to build innovative solutions and ensure a strong team with good dynamics. With a master's degree from UiO and an ongoing PhD in machine learning at NMBU, he drives Servanda forward with a keen eye for both technology and business development.",
+    "tamasDescription": "Tamas Vicze is a co-owner and fullstack developer at Servanda, where he creates intuitive and seamless user experiences across websites, applications, and modules. He works full-time as a developer at Kristiania University College and has specialization in C#, .NET, and MSSQL through AW Academy. With experience from Convene and Konica Minolta Nordics, he brings solid technical expertise and a practical approach to modern web development.",
+    "domantasDescription": "Domantas Sakalys is a co-owner and machine learning developer at Servanda, where he develops advanced language models for both businesses and consumers. He ensures that the models are not only efficient but also safe to use, with continuous monitoring and optimization. With a background in physics from UiO and an ongoing master's degree in data science at NMBU, he combines analytical precision with practical AI development to create robust and innovative solutions.",
+    "purposeOverview": "Servanda works to democratize the law by making it more accessible, efficient, and understandable. Accessibility has long been limited due to expensive lawyers, making the law economically inaccessible for many, with prices ranging from 800 to 6000 NOK per hour for legal assistance (DN, 2024). Even if you can afford legal services, the process takes at least a few weeks, and it is often even slower in government agencies. For example, the estimated processing time for free legal aid in Oslo and Viken is 7–9 weeks (Statsforvalteren i Oslo og Viken, n.d.). A common consumer saves both time and money by diving into legal literature to find their own answers, but this is rarely done in an afternoon without challenges. Norwegian laws and regulations are written in various language forms such as Bokmål, Nynorsk, and Old Norwegian without overlap. Additionally, Norwegian law contains many legally specific terms that ordinary consumers are not familiar with. To increase accessibility, we will create a legal model that everyone can access via a mobile application or on our website, ensuring that everyone with internet access can use our model. To minimize the processing time of legal issues, we use an optimized model that can provide quick answers to complex questions, reducing the processing time for standard legal disputes by at least 100 times. To make the law more understandable, our model converts heavy technical terms into simpler language that makes more sense to consumers. If the model uses difficult technical terms, they are also explained continuously.",
+    "valuesOverview": "Servanda is committed to achieving the lowest possible emissions for the operation and training of our models. Therefore, we use renewable Norwegian energy through Norwegian data centers. The safety of our users is central to our process. To ensure this, we guarantee that your data on our platforms is protected and not shared with third parties. This gives you full control over your exposure without risk. You also have the option to delete your data, such as chat history, if you wish. We will also take steps to comply with the EU's AI regulation, as well as implement methods such as red teaming, constant monitoring of the model's performance, and possibly a kill switch.",
+    "ourTeam": "Our team",
+    "ourPurpose": "Our purpose",
+    "ourValues": "Our values",
+    "ourPurposeAndValues": "Our purpose",
+    "andreasName": "Andreas Massey",
+    "andreasRole": "Co-founder, CEO, CTO",
+    "brorName": "Bror Dahle",
+    "brorRole": "Co-founder, COO, CLO",
+    "domantasName": "Domantas Sakalys",
+    "domantasRole": "Co-owner, ML developer",
+    "tamasName": "Tamas Vicze",
+    "tamasRole": "Co-owner, Fullstack developer"
+  },
+  "Ai": {
+    "aiOverview": "AI Overview",
+    "aiApplications": "Our AI model",
+    "model": "Model",
+    "modelTitle": "Servanda's AI model: Lovboka",
+    "modelContent": "Servanda primarily develops one legal AI model: Lovboka. Lovboka is an advanced legal language model that combines a wide range of sources, including Norwegian laws, case law, preparatory works, and other relevant legal documents. This holistic approach ensures a solid knowledge base, allowing users to trust that the model's answers and insights are both accurate and legally grounded. Lovboka is more than just a knowledge base - the model is designed to be an effective support in legal work. Through continuous updates and adaptation to changes in legislation, it provides users with confidence in a dynamic legal world.",
+    "features": "Features",
+    "featuresTitle": "Lovboka's features and impact",
+    "featuresContent": "The model offers: Precise answers based on updated legal sources. Access to multiple perspectives, including comparisons between laws, judgments, and preparatory works. Efficiency and accessibility, which frees up time for professionals and improves decision-making processes. Lovboka sets a new standard for legal technology by combining artificial intelligence with Norwegian legal understanding."
+  },
+  "Blog": {
+    "blog": "Blog",
+    "blogDescription": "News about our products",
+    "blogPostNr1Title": "The beginning",
+    "blogPostNr1": "Servanda started as a modest conversation at a kiosk in Sofienbergsparken on an early autumn evening. Andreas and Bror sat together and stared out of a dirty window at Narvesen while enjoying a panini. Bror discussed legal challenges and slow processes. Andreas listened drowsily and thought to himself that legal problems should be solvable with AI, like everything else. After Bror's tenth monologue, Andreas interrupted and asked the question he had been thinking about for the last half hour: 'What if we just train a language model on the entire legal code?' Bror paused and looked skeptical. After a few minutes, he dismissed the idea as unrealistic. The idea was not mentioned again for six months. The following spring, Bror invited Andreas for pizza. He had an idea. 'What if we made that model – would it be good? If we can, what can we achieve then?' A simple question started Servanda's journey towards revolutionizing the legal process in society.",
+    "blogPostNr2Title": "Not a regular startup",
+    "blogPostNr2": "Servanda is not a typical startup. Our goal is to improve as much of today's legal system as possible over the next three years. We are here to learn, especially from our customers. Together, we can create the best possible product, and therefore it is important that you give us feedback if you think we can do something better. We hope you are as excited to join us on our journey, no matter where it takes us, as we are. If you know someone who could use a legal model – aka a chatbot for law – they can get free access 24/7 as long as they tell us what can be improved. We will post more about this as we approach the beta launch. You'll hear from us again soon ;) Regards, the Servanda team."
+  },
+  "Lovboka": {
+    "lovbokaOverview": "Lovboka is a legal AI assistant that provides precise answers with references to current legislation, court decisions, and legislative preparatory works. It uses RAG technology (Retrieval-Augmented Generation) and updated machine learning to deliver fast and legally accurate answers. The assistant simplifies legal information without sacrificing accuracy. Both lawyers and individuals receive clear answers without having to interpret complex language. We use consolidated legislation in the Norwegian class, which ensures updated references and correct legal understanding. Lovboka not only retrieves legal texts but also subsequent changes, clarifications, and relevant legal sources. By integrating case law and legislative preparatory works, Lovboka provides a comprehensive assessment of current law. Users receive updated, anchored reflections based on actual practice and dominant interpretations.",
+    "lovboka": "Lovboka",
+    "lawViaChatForEveryone": "Law via chat, for everyone"
+  },
+  "Privacy": {
+    "privacy": "Privacy",
+    "moreAboutPrivacy": "More about our privacy policy",
+    "dataProtection": "Data Protection",
+    "accessControl": "Access Control",
+    "dataProtectionTitle": "Data Protection and Security",
+    "dataProtectionContent": "In our company, we take privacy seriously and have implemented strict procedures and technological measures to ensure that your data is handled safely and responsibly. Our AI model, which users interact with, is designed to minimize the need for personally identifiable information. All processed data is anonymized and encrypted before being stored on our secure external servers. This ensures that the information is unreadable to unauthorized parties, both during transfer and storage. We follow industry standards and regulations such as GDPR to ensure that all processes comply with current legislation.",
+    "accessControlTitle": "Access Control and Security Measures",
+    "accessControlContent": "To further protect our users' privacy, we employ strict access controls and regular security assessments. Only authorized employees have access to the data, and this is continuously monitored to prevent unauthorized use. We use built-in security mechanisms in the AI model that reduce the risk of data leakage, while also implementing technologies such as differential privacy to prevent individual data from being traced back to individual users. Our priority is to deliver innovative solutions without compromising your trust and privacy.",
+    "contactInfo": "If you have any further questions, please feel free to contact us by email.",
+    "title": "Privacy and Security",
+    "tabs": {
+      "general": "General",
+      "lovboka": "Lovboka",
+      "juridisk-db": "Juridisk DB"
+    },
+    "general": {
+      "intro": "At Servanda AS, we take privacy and data security seriously. We have implemented strict procedures and technological measures to ensure that all information is handled safely and responsibly. We follow industry standards and regulations such as GDPR and NIS2, and we conduct regular security audits and penetration tests to ensure our systems meet the strictest requirements.",
+      "userData": "User Data and Logging",
+      "userDataPoint1": "Audit logs: All system requests are logged and analyzed to prevent misuse.",
+      "userDataPoint2": "User controls and transparency: Users can request access, correction, and deletion of data in accordance with GDPR."
+    },
+    "lovboka": {
+      "dataMinimization": "Minimization of Personal Data",
+      "dataMinimizationText": "Our AI model is developed to minimize the need for personally identifiable information (PII). Where data analysis is necessary, we ensure that all information is anonymized and aggregated before further processing.",
+      "encryption": "Encryption and Data Security",
+      "encryptionPoint1": "End-to-end encryption: All data is encrypted both in transit (TLS 1.3) and at rest (AES-256) to prevent unauthorized access.",
+      "encryptionPoint2": "Separate storage of metadata and content: This reduces the risk of combining sensitive information.",
+      "encryptionPoint3": "Zero Trust access model: Only authorized users with necessary rights have access to specific datasets."
+    },
+    "juridisk-db": {
+      "databaseSecurity": "Securing the Vector Database (Juridisk DB)",
+      "securityPoint1": "RBAC (Role-Based Access Control): Access is controlled by roles and minimal necessity principle.",
+      "securityPoint2": "API tokens with limited lifetime: Database access requires authentication via short-lived, secure tokens.",
+      "securityPoint3": "Anomaly Detection and Intrusion Detection System (IDS): Monitors unusual queries and potential intrusion attempts.",
+      "securityPoint4": "Rate limiting and throttling: Prevents database abuse via automated attacks."
+    }
+  },
+
+  "AiSafety": {
+    "aiSafety": "AI Safety",
+    "moreAboutAiSafety": "Learn more about our approach to AI safety",
+    "transparency": "Transparency",
+    "transparencyTitle": "Ensuring transparent model behavior",
+    "transparencyContent": "AI security is a crucial priority in our solutions. We use a range of advanced methods to ensure our model is transparent, understandable, and reliable, both for our users and developers. This not only provides increased security but also ensures that the solution meets high ethical standards and legislation. To ensure transparent model behavior, we use: Attention maps that capture which weights and variables have the greatest impact on the final result produced by the model. Saliency maps, which visualize the importance of specific data elements, making it easier to understand how the model prioritizes information. Layer-wise analytical tools to inspect the information flow within the network, which can identify bottlenecks or potential security risks.",
+    "reliability": "Reliability",
+    "reliabilityTitle": "Increasing model reliability",
+    "reliabilityContent": "To increase the reliability of the model, we implement: Robustness testing, where the model is exposed to unusual or disruptive data to see how it reacts under stress, thereby reducing the risk of errors or manipulation. Adversarial testing, where we simulate attacks on the model to uncover vulnerabilities that could be exploited by external actors. Differential privacy, which protects sensitive data by introducing noise in data processing, ensuring that information about individuals cannot be traced.",
+    "control": "Control",
+    "controlTitle": "Strengthening control over the model",
+    "controlContent": "To strengthen control over the model, we use: Continuous logging and monitoring of the model's decision-making processes, so that any unwanted deviations can be quickly identified and remedied. Version control of models, which ensures that we always know what updates have been made and how these affect the model. Ethical assessment procedures, where the model is evaluated for potential biases and unintended consequences before implementation.",
+    "future": "Future",
+    "futureTitle": "Future safety developments",
+    "futureContent": "Future safety developments include the use of explainable AI techniques (XAI) that provide human explanations for the model's decisions, and integration of rule-based control systems that restrict the model from performing unauthorized actions. This is just a summary of the comprehensive measures we take to ensure that our AI is safe, responsible, and transparent, while providing high value to our users."
+  },
+
+  "Updates": {
+    "productUpdates": "Product updates",
+    "moreAboutProductUpdates": "Read about our newest features",
+    "update1title": "New focus on automatic update technology for legal databases",
+    "update1paragraph1": "Servanda is pleased to present our new direction! After inspiring conversations with various actors in legal-tech, public administration, and legal database providers, Servanda has decided to focus on automation in law.",
+    "update1paragraph2": "Every year, many full-time positions are used at the largest legal database providers to manually update legal legislation. This cost is significant and very unnecessary. Those responsible for these processes could spend time on much more valuable value creation and a fraction of the time updating legislation if parts of this process were automated.",
+    "update1paragraph3": "We have established a data sharing agreement with Lovdata to realize these ambitions and look forward to making law a bit faster."
+  },
+  "Contact": {
+    "phone": "Phone",
+    "phoneNr": "+47 981 16 824",
+    "email": "E-mail",
+    "emailAddress": "post@servanda.no",
+    "companyName": "Servanda AS",
+    "org": "Org. nr.",
+    "orgNr": "934118642",
+    "sendAnEmail": "Contact us by email:",
+    "emailCopied": "Email copied to clipboard!",
+    "phoneNrCopied": "Phone number copied to clipboard!",
+    "linkedinTooltip": "Follow us on LinkedIn",
+    "linkedinAriaLabel": "LinkedIn icon"
+  },
+  "Navigation": {
+    "product": "Product",
+    "security": "Security",
+    "team": "Team",
+    "news": "News",
+    "about": "About",
+    "aboutDescription": "Get to know more about us",
+    "contact": "Contact",
+    "contactDescription": "Get in touch",
+    "lovboka": "Lovboka",
+    "lovbokaDescription": "For regular people",
+    "ai": "AI",
+    "aiDescription": "Learn more about our AI research",
+    "privacy": "Privacy",
+    "privacyDescription": "Our product privacy policy",
+    "safety": "AI Safety",
+    "safetyDescription": "Security is number one",
+    "productUpdates": "Product updates",
+    "productUpdatesDescription": "Read about our newest features",
+    "blog": "Blog",
+    "blogDescription": "Read more about Servanda",
+    "deviceLanguage": "Device language",
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "next": "Next",
+    "previous": "Previous",
+    "juridisk-db": "Juridisk DB",
+    "juridisk-dbDescription": "Legal database for AI"
+  },
+  "JuridiskDB": {
+    "title": "Juridisk DB",
+    "subtitle": "Comprehensive and continuously updated",
+    "overview": "JuridiskDB is a comprehensive and continuously updated legal database that collects the most important legal sources in Norwegian legislation. It provides access to general laws and regulations, which are updated daily, as well as legislative preparatory works from the Parliament and case law from the Supreme Court.",
+    "purpose": "This collection provides a holistic and updated foundation for legal analyses and model development, simplifying access to accurate, verified, and consolidated legal sources without the need for time-consuming data collection.",
+    "uniqueAccessTitle": "Unique Access for AI Developers and Lawyers",
+    "uniqueAccessContent": "JuridiskDB is specifically developed for use in legal AI models, research, and automated analyses. With this database, developers and lawyers can:",
+    "bulletPoint1": "Avoid high costs and license restrictions from competitors.",
+    "bulletPoint2": "Get structured and searchable legal data without manual consolidation.",
+    "bulletPoint3": "Integrate real-time updated legal sources in machine learning, RAG models, or other AI systems.",
+    "securityTitle": "Security and Integrity",
+    "securityIntro": "To ensure high quality and reliability:",
+    "securityPoint1": "All sources are verified and automatically updated to ensure compliance with current law.",
+    "securityPoint2": "Data is stored with AES-256 encryption and secured with RBAC access control to protect against unauthorized access.",
+    "securityPoint3": "API access with modern authentication provides safe and efficient integration with AI systems and legal analysis tools.",
+    "conclusion": "With JuridiskDB, you get simple, secure, and cost-effective access to Norway's most comprehensive legal data foundation, without the usual hassle of data management and updates."
+  }
+}

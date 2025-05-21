@@ -1,0 +1,166 @@
+{
+  "Home": {
+    "servanda": "Servanda",
+    "servandaMotto": "Rask jus, gjort enkelt. For alle."
+  },
+  "AboutUs": {
+    "aboutUs": "Om oss",
+    "aboutUsDescription": "Bli kjent med oss",
+    "aboutUsOverview": "Teamet vårt består av fire talentfulle menn med bakgrunn i jus, maskinlæring og informasjonsteknologi.",
+    "brorDescription": "Bror Dahle er medgründer, COO og CLO i Servanda, der han styrer den daglige driften, håndterer kontrakter, finansiering og rekruttering. Med en solid bakgrunn innen psykologi og juss, bringer han analytisk presisjon og juridisk innsikt til selskapet. Han tar en profesjonsgrad i psykologi og en mastergrad i jus, samtidig som han jobber som saksbehandler i Statens helsetilsyn, hvor han sikrer grundige vurderinger i komplekse saker. Hans brede kompetanse bidrar til både strategisk vekst og juridisk trygghet i Servanda.",
+    "andreasDescription": "Andreas Massey er medgründer, CEO og CTO i Servanda, der han leder både selskapets strategiske retning og teknologiske utvikling. Han kombinerer sin ekspertise innen kognitiv nevrovitenskap og maskinlæring for å bygge innovative løsninger og sikre et sterkt team med god dynamikk. Med en mastergrad fra UiO og en pågående doktorgrad i maskinlæring ved NMBU, driver han Servanda fremover med et skarpt blikk for både teknologi og forretningsutvikling.",
+    "tamasDescription": "Tamas Vicze er medeier og fullstack utvikler i Servanda, hvor han skaper intuitive og sømløse brukeropplevelser på tvers av nettsider, applikasjoner og moduler. Han jobber fulltid som utvikler ved Høyskolen Kristiania og har spesialisering i C#, .NET og MSSQL gjennom AW Academy. Med erfaring fra Convene og Konica Minolta Nordics, bringer han solid teknisk ekspertise og en praktisk tilnærming til moderne webutvikling.",
+    "domantasDescription": "Domantas Sakalys er medeier og maskinlæringsutvikler i Servanda, hvor han utvikler avanserte språkmodeller for både bedrifter og forbrukere. Han sørger for at modellene ikke bare er effektive, men også trygge i bruk, med kontinuerlig overvåking og optimalisering. Med en bakgrunn i fysikk fra UiO og en pågående mastergrad i datavitenskap ved NMBU, kombinerer han analytisk presisjon med praktisk AI-utvikling for å skape robuste og innovative løsninger.",
+    "purposeOverview": "Servanda jobber for å demokratisere jusen ved å gjøre den mer tilgjengelig, effektiv og forståelig. Tilgjengeligheten har lenge vært begrenset på grunn av dyre advokater, noe som gjør jusen økonomisk utilgjengelig for mange, med priser som varierer fra 800 til 6000 kroner per time for juridisk bistand (DN, 2024). Selv om du har råd til juridiske tjenester, tar prosessen minst noen uker, og det er ofte enda tregere i statlige organer. For eksempel er den estimerte saksbehandlingstiden for fri rettshjelp i Oslo og Viken 7–9 uker (Statsforvalteren i Oslo og Viken, u.å.). En vanlig forbruker sparer både tid og penger ved å dypdykke i juridisk litteratur for å finne egne svar, men dette er sjeldent gjort på en ettermiddag uten utfordringer. Norske lover og forskrifter er skrevet på ulike språkformer som bokmål, nynorsk og gammelnorsk uten overlapp. I tillegg inneholder norsk jus mange juridisk spesifikke begreper som vanlige forbrukere ikke er kjent med. For å øke tilgjengeligheten vil vi lage en juridisk modell som alle har tilgang til via en mobilapplikasjon eller på våre nettsider, og på den måten sikre at alle med internett-tilgang kan benytte vår modell. For å minimere behandlingstiden av juridiske problemstillinger benytter vi en optimalisert modell som kan gi raske svar på komplekse spørsmål, og vår løsning kan minst 100 ganger redusere prosesseringstiden for standard juridiske tvister. For å gjøre jusen mer forståelig, konverterer modellen våre tunge fagbegreper til et enklere språk som gir mer mening for forbrukere, og dersom modellen benytter vanskelige fagbegreper, blir de også forklart fortløpende.",
+    "valuesOverview": "Servanda jobber for et lavest mulig utslipp for drift og trening av våre modeller. Derfor benytter vi fornybar norsk energi gjennom norske datasentre. Våre brukeres trygghet står sentralt i vår prosess. For å sikre dette, garanterer vi at dine data på våre plattformer blir beskyttet og ikke delt med tredjeparter. Dette gir deg full kontroll over din eksponering uten risiko. Du har også muligheten til å slette dine data, for eksempel chat-historikk, dersom du ønsker det. Vi vil også ta steg for å overholde EUs KI-forordning, samt implementere metoder som red teaming, konstant overvåking av modellens ytelse og muligens en kill-switch.",
+    "ourTeam": "Vårt team",
+    "ourPurpose": "Vårt formål",
+    "ourValues": "Våre verdier",
+    "ourPurposeAndValues": "Vårt formål",
+    "andreasName": "Andreas Massey",
+    "andreasRole": "Medgründer, CEO, CTO",
+    "brorName": "Bror Dahle",
+    "brorRole": "Medgründer, COO, CLO",
+    "domantasName": "Domantas Sakalys",
+    "domantasRole": "Medeier, ML utvikler",
+    "tamasName": "Tamas Vicze",
+    "tamasRole": "Medeier, Fullstack utvikler"
+  },
+  "Ai": {
+    "aiOverview": "AI Oversikt",
+    "aiApplications": "Vår AI modell",
+    "model": "Modell",
+    "modelTitle": "Servandas AI-modell: Lovboka",
+    "modelContent": "Servanda utvikler hovedsakelig én juridisk AI-modell: Lovboka. Lovboka er en avansert juridisk språkmodell som kombinerer et bredt spekter av kilder, inkludert norske lover, rettspraksis, forarbeider og andre relevante juridiske dokumenter. Denne helhetlige tilnærmingen sikrer et solid kunnskapsgrunnlag, slik at brukerne kan stole på at modellens svar og innsikt er både nøyaktige og juridisk forankret. Lovboka er mer enn bare en kunnskapsbase – modellen er designet for å være en effektiv støttespiller i juridisk arbeid. Gjennom kontinuerlig oppdatering og tilpasning til endringer i lovverket, gir den brukerne trygghet i en dynamisk rettsverden.",
+    "features": "Funksjoner",
+    "featuresTitle": "Lovbokas funksjoner og innvirkning",
+    "featuresContent": "Modellen tilbyr: Presise svar basert på oppdaterte juridiske kilder. Tilgang til flere perspektiver, inkludert sammenligninger mellom lover, dommer og forarbeider. Effektivitet og tilgjengelighet, som frigjør tid for fagfolk og forbedrer beslutningsprosesser. Lovboka setter en ny standard for juridisk teknologi ved å kombinere kunstig intelligens med norsk rettsforståelse."
+  },
+  "Blog": {
+    "blog": "Blogg",
+    "blogDescription": "Nyhetene om produktene våre",
+    "blogPostNr1Title": "Begynnelsen",
+    "blogPostNr1": "Servanda startet som en beskjeden samtale ved en kiosk i Sofienbergsparken en tidlig høstkveld. Andreas og Bror satt sammen og stirret ut av et skittent vindu på Narvesen mens de nøt en panini. Bror diskuterte juridiske utfordringer og trege prosesser. Andreas lyttet sløvt og tenkte i sitt stille sinn at juridiske problemer måtte kunne løses med AI, som alt annet. Etter Brors tiende monolog brøt Andreas inn og stilte det spørsmålet han hadde tenkt på den siste halvtimen: «Hva om vi bare trener en språkmodell på hele det juridiske lovverket?». Bror stoppet opp og så skeptisk ut. Etter noen minutter avfeide han ideen som urealistisk. Ideén ble ikke nevnt igjen på seks måneder. Den neste våren inviterte Bror Andreas på pizza. Han hadde fått en idé. «Hva om vi hadde laget den modellen – ville den vært bra? Hvis vi kan, hva kan vi oppnå da?». Et enkelt spørsmål startet Servandas reise mot å revolusjonere den juridiske prosessen i samfunnet.",
+    "blogPostNr2Title": "Ikke en vanlig startup",
+    "blogPostNr2": "Servanda er ikke en vanlig startup. Målet vårt er å forbedre mest mulig av dagens juridiske system i løpet av de neste tre årene. Vi er her for å lære, spesielt fra våre kunder. Sammen kan vi skape det beste mulige produktet, og derfor er det viktig at dere gir oss tilbakemeldinger dersom dere mener vi kan gjøre noe bedre. Vi håper dere er like gira på å være med på vår reise, uansett hvor den tar oss, som vi er. Dersom du kjenner noen som kunne hatt bruk for en juridisk modell – aka en chatbot for jus – kan de få gratis tilgang 24/7 så lenge de forteller oss hva som kan forbedres. Vi kommer til å poste mer om dette når det nærmer seg beta-lansering. Dere hører fra oss snart igjen ;) Hilsen Servanda-teamet."
+  },
+  "Lovboka": {
+    "lovbokaOverview": "Lovboka er en juridisk AI-assistent som gir presise svar med referanser til gjeldende lovverk, rettsavgjørelser og lovforarbeider. Den bruker RAG-teknologi (Retrieval-Augmented Generation) og oppdatert maskinlæring for å levere raske og juridisk treffsikre svar. Assistenten forenkler juridisk informasjon uten å ofre nøyaktighet. Både jurister og privatpersoner får klare svar uten å måtte tolke komplisert språk. Vi benytter konsoliderte lovverk i norgesklasse, som sikrer oppdaterte referanser og korrekt juridisk forståelse. Lovboka henter ikke bare lovtekster, men også senere endringer, presiseringer og relevante juridiske kilder. Ved å integrere rettspraksis og lovforarbeider gir Lovboka en helhetlig vurdering av gjeldende rett. Brukerne får oppdaterte, forankrede refleksjoner basert på faktisk praksis og dominerende tolkninger.",
+    "lovboka": "Lovboka",
+    "lawViaChatForEveryone": "Jus gjennom chat, for alle"
+  },
+  "Privacy": {
+    "title": "Personvern og Sikkerhet",
+    "tabs": {
+      "general": "Generelt",
+      "lovboka": "Lovboka",
+      "juridisk-db": "Juridisk DB"
+    },
+    "general": {
+      "intro": "I Servanda AS tar vi personvern og datasikkerhet på alvor. Vi har implementert strenge rutiner og teknologiske tiltak for å sikre at all informasjon håndteres trygt og ansvarlig. Vi følger bransjestandarder og regelverk som GDPR og NIS2, og vi utfører regelmessige sikkerhetsrevisjoner og penetrasjonstester for å sikre at våre systemer oppfyller de strengeste kravene.",
+      "userData": "Brukerdata og logging",
+      "userDataPoint1": "Audit-logs: Alle forespørsler til systemet logges og analyseres for å forhindre misbruk.",
+      "userDataPoint2": "Brukerkontroller og transparens: Brukere kan be om innsyn, retting og sletting av data i samsvar med GDPR."
+    },
+    "lovboka": {
+      "dataMinimization": "Minimering av personopplysninger",
+      "dataMinimizationText": "Vår KI-modell er utviklet for å minimere behovet for personlig identifiserbar informasjon (PII). Der det er nødvendig med dataanalyse, sørger vi for at all informasjon er anonymisert og aggregert før videre behandling.",
+      "encryption": "Kryptering og datasikkerhet",
+      "encryptionPoint1": "Ende-til-ende-kryptering: All data er kryptert både under overføring (TLS 1.3) og i hvile (AES-256) for å forhindre uautorisert tilgang.",
+      "encryptionPoint2": "Separat lagring av metadata og innhold: Dette reduserer risikoen for sammenstilling av sensitive opplysninger.",
+      "encryptionPoint3": "Zero Trust-tilgangsmodell: Kun autoriserte brukere med nødvendige rettigheter har tilgang til spesifikke datasett."
+    },
+    "juridisk-db": {
+      "databaseSecurity": "Sikring av vektordatabasen (Juridisk DB)",
+      "securityPoint1": "RBAC (Role-Based Access Control): Tilgang styres etter roller og minimalt nødvendighetsprinsipp.",
+      "securityPoint2": "API-token med begrenset levetid: Tilgang til databasen krever autentisering via kortvarige, sikre tokens.",
+      "securityPoint3": "Anomaly Detection og Intrusion Detection System (IDS): Overvåker uvanlige spørringer og mulige inntrengingsforsøk.",
+      "securityPoint4": "Rate limiting og throttling: Forhindrer misbruk av databasen via automatiserte angrep."
+    }
+  },
+  "AiSafety": {
+    "aiSafety": "AI Sikkerhet",
+    "moreAboutAiSafety": "Lær mer om vår tilnærming til AI sikkerhet",
+    "transparency": "Transparens",
+    "transparencyTitle": "Sikring av transparent modelladferd",
+    "transparencyContent": "KI-sikkerhet er en avgjørende prioritet i våre løsninger. Vi benytter en rekke avanserte metoder for å sikre at modellen vår er transparent, forståelig og pålitelig, både for våre brukere og utviklere. Dette gir ikke bare økt trygghet, men sikrer også at løsningen oppfyller høye etiske standarder og lovverk. For å sikre transparent modelladferd benytter vi: Oppmerksomhetskart som fanger opp hvilke vekter og variabler som har størst påvirkning på sluttresultatet modellen produserer. Salienskart, som visualiserer viktigheten av spesifikke dataelementer, og gjør det lettere å forstå hvordan modellen prioriterer informasjon. Lagvise analytiske verktøy for å inspisere informasjonsflyten innad i nettverket, som kan identifisere flaskehalser eller potensielle sikkerhetsrisikoer.",
+    "reliability": "Pålitelighet",
+    "reliabilityTitle": "Økning av modellens pålitelighet",
+    "reliabilityContent": "For å øke påliteligheten av modellen, implementerer vi: Robusthetstesting, hvor modellen utsettes for uvanlige eller forstyrrende data for å se hvordan den reagerer under stress og dermed redusere risikoen for feil eller manipulasjon. Adversarial testing, hvor vi simulerer angrep på modellen for å avdekke sårbarheter som kan utnyttes av eksterne aktører. Differential privacy, som beskytter sensitive data ved å introdusere støy i databehandlingen, slik at informasjon om enkeltindivider ikke kan spores.",
+    "control": "Kontroll",
+    "controlTitle": "Styrking av kontroll over modellen",
+    "controlContent": "For å styrke kontrollen over modellen benytter vi: Kontinuerlig logging og overvåkning av modellens beslutningsprosesser, slik at eventuelle uønskede avvik raskt kan identifiseres og utbedres. Versjonskontroll av modeller, som sikrer at vi alltid vet hvilke oppdateringer som er gjort, og hvordan disse påvirker modellen. Etiske vurderingsprosedyrer, hvor modellen evalueres for potensielle skjevheter og utilsiktede konsekvenser før implementering.",
+    "future": "Fremtid",
+    "futureTitle": "Fremtidige sikkerhetsutviklinger",
+    "futureContent": "Fremtidige sikkerhetsutviklinger inkluderer bruk av forklarbare AI-teknikker (XAI) som gir menneskelige forklaringer på modellens avgjørelser, og integrasjon av regelbaserte kontrollsystemer som begrenser modellen fra å utføre uautoriserte handlinger. Dette er kun et sammendrag av de omfattende tiltakene vi tar for å sikre at vår AI er sikker, ansvarlig og transparent, samtidig som den gir våre brukere høy nytteverdi."
+  },
+  "Updates": {
+    "productUpdates": "Produktoppdateringer",
+    "moreAboutProductUpdates": "Les om våre nyeste funksjoner",
+    "youCanReadUpdatesHere": "Her kan du lese mer om oppdateringene av produktet vårt når den er utgitt",
+    "update1title": "Ny satsing på automatisk oppdateringsteknologi for juridiske databaser",
+    "update1paragraph1": "Servanda har gleden av å presentere vår nye retning! Etter inspirerende samtaler med diverse aktører innenfor legal-tech, offentlig forvaltning og lovverk-leverandører, har Servanda besluttet å satse på automatisering i jusen.",
+    "update1paragraph2": "Hvert år brukes mange årsverk hos de største lovverk-leverandørene på å manuelt oppdatere juridisk lovverk. Denne kostnaden er stor og svært unødvendig. De som er ansvarlig for disse prosessen kan bruke tid på svært mye mer verdifull verdiskapning og en brøkdel så mye tid på å oppdatere lovverk dersom deler av denne prosessen automatiseres.",
+    "update1paragraph3": "Vi har etablert en datadelingsavtale med Lovdata for å realisere disse ambisjonene og ser fram til å gjøre jusen litt raskere. "
+  },
+  "Contact": {
+    "phone": "Mobil",
+    "phoneNr": "+47 981 16 824",
+    "email": "E-post",
+    "emailAddress": "post@servanda.no",
+    "companyName": "Servanda AS",
+    "org": "Org. nr.",
+    "orgNr": "934118642",
+    "sendAnEmail": "Kontakt oss på mail:",
+    "emailCopied": "E-post kopiert til utklippstavlen!",
+    "phoneNrCopied": "Telefonnummer kopiert til utklippstavlen!",
+    "linkedinTooltip": "Følg oss på LinkedIn",
+    "linkedinAriaLabel": "LinkedIn ikon"
+  },
+  "Navigation": {
+    "product": "Produkt",
+    "security": "Sikkerhet",
+    "team": "Team",
+    "news": "Nyheter",
+    "about": "Om",
+    "aboutDescription": "Bli bedre kjent med oss",
+    "contact": "Kontakt",
+    "contactDescription": "Sånn kan du nå oss",
+    "lovboka": "Lovboka",
+    "lovbokaDescription": "For privatpersoner",
+    "ai": "AI",
+    "aiDescription": "Lær mer om vår AI-forskning",
+    "privacy": "Personvern",
+    "privacyDescription": "Vår personvernpolicy for produkter",
+    "safety": "AI-sikkerhet",
+    "safetyDescription": "Sikkerhet er nummer én",
+    "productUpdates": "Produktoppdateringer",
+    "productUpdatesDescription": "Les om våre nyeste funksjoner",
+    "blog": "Blogg",
+    "blogDescription": "Les mer om Servanda",
+    "deviceLanguage": "Enhetsspråk",
+    "readMore": "Les mer",
+    "readLess": "Les mindre",
+    "next": "Neste",
+    "previous": "Forrige",
+    "juridisk-db": "Juridisk DB",
+    "juridisk-dbDescription": "Juridisk database for AI"
+  },
+  "JuridiskDB": {
+    "title": "Juridisk DB",
+    "subtitle": "Omfattende og kontinuerlig oppdatert",
+    "overview": "JuridiskDB er en omfattende og kontinuerlig oppdatert juridisk database som samler de viktigste rettskildene i norsk lovgivning. Den gir tilgang til alminnelige lover og forskrifter, som oppdateres daglig, samt lovforarbeider fra Stortinget og rettspraksis fra Høyesterett.",
+    "purpose": "Denne samlingen gir et helhetlig og oppdatert grunnlag for juridiske analyser og modellutvikling, og forenkler tilgangen til nøyaktige, verifiserte og sammenstilte rettskilder uten behov for tidkrevende datainnsamling.",
+    "uniqueAccessTitle": "Unik tilgang for AI-utviklere og jurister",
+    "uniqueAccessContent": "JuridiskDB er spesielt utviklet for bruk i juridiske AI-modeller, forskning og automatiserte analyser. Med denne databasen kan utviklere og jurister:",
+    "bulletPoint1": "Unngå høye kostnader og lisensbegrensninger hos konkurrenter.",
+    "bulletPoint2": "Få strukturert og søkbar juridisk data uten behov for manuell konsolidering.",
+    "bulletPoint3": "Integrere sanntidsoppdaterte rettskilder i maskinlæring, RAG-modeller eller andre AI-systemer.",
+    "securityTitle": "Sikkerhet og integritet",
+    "securityIntro": "For å sikre høy kvalitet og pålitelighet:",
+    "securityPoint1": "Alle kilder er verifiserte og oppdateres automatisk for å sikre samsvar med gjeldende rett.",
+    "securityPoint2": "Data lagres med AES-256-kryptering og sikres med RBAC-tilgangsstyring for å beskytte mot uautorisert tilgang.",
+    "securityPoint3": "API-tilgang med moderne autentisering gir trygg og effektiv integrasjon med AI-systemer og juridiske analyseverktøy.",
+    "conclusion": "Med JuridiskDB får du enkel, sikker og kostnadseffektiv tilgang til Norges mest omfattende juridiske datagrunnlag, uten det vanlige strevet med datahåndtering og oppdatering."
+  }
+}

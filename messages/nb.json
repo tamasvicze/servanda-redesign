@@ -97,11 +97,13 @@
   "Updates": {
     "productUpdates": "Produktoppdateringer",
     "moreAboutProductUpdates": "Les om våre nyeste funksjoner",
-    "youCanReadUpdatesHere": "Her kan du lese mer om oppdateringene av produktet vårt når den er utgitt",
     "update1title": "Ny satsing på automatisk oppdateringsteknologi for juridiske databaser",
-    "update1paragraph1": "Servanda har gleden av å presentere vår nye retning! Etter inspirerende samtaler med diverse aktører innenfor legal-tech, offentlig forvaltning og lovverk-leverandører, har Servanda besluttet å satse på automatisering i jusen.",
-    "update1paragraph2": "Hvert år brukes mange årsverk hos de største lovverk-leverandørene på å manuelt oppdatere juridisk lovverk. Denne kostnaden er stor og svært unødvendig. De som er ansvarlig for disse prosessen kan bruke tid på svært mye mer verdifull verdiskapning og en brøkdel så mye tid på å oppdatere lovverk dersom deler av denne prosessen automatiseres.",
-    "update1paragraph3": "Vi har etablert en datadelingsavtale med Lovdata for å realisere disse ambisjonene og ser fram til å gjøre jusen litt raskere. "
+    "update1paragraph1": "Servanda lanserer ny satsing på automatisering av juridisk lovverk. Ved hjelp av en datadelingsavtale med Lovdata vil oppdatering av lover skje automatisk, redusere manuelt arbeid og frigjøre ressurser til mer verdiskapende oppgaver.",
+    "update1paragraph2": "",
+    "update1paragraph3": "",
+    "version0": "Versjon 0",
+    "version1": "Nåværende versjon",
+    "version2": "Versjon 2 (Kommer snart)"
   },
   "Contact": {
     "phone": "Mobil",

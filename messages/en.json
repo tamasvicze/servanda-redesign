@@ -109,9 +109,12 @@
     "productUpdates": "Product updates",
     "moreAboutProductUpdates": "Read about our newest features",
     "update1title": "New focus on automatic update technology for legal databases",
-    "update1paragraph1": "Servanda is pleased to present our new direction! After inspiring conversations with various actors in legal-tech, public administration, and legal database providers, Servanda has decided to focus on automation in law.",
-    "update1paragraph2": "Every year, many full-time positions are used at the largest legal database providers to manually update legal legislation. This cost is significant and very unnecessary. Those responsible for these processes could spend time on much more valuable value creation and a fraction of the time updating legislation if parts of this process were automated.",
-    "update1paragraph3": "We have established a data sharing agreement with Lovdata to realize these ambitions and look forward to making law a bit faster."
+    "update1paragraph1": "Servanda launches a new focus on automation of legal legislation. Through a data sharing agreement with Lovdata, law updates will happen automatically, reducing manual work and freeing up resources for more value-creating tasks.",
+    "update1paragraph2": "",
+    "update1paragraph3": "",
+    "version0": "Version 0",
+    "version1": "Current Version",
+    "version2": "Version 2 (Coming Soon)"
   },
   "Contact": {
     "phone": "Phone",

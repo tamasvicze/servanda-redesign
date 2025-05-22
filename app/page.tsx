@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowDown, ArrowUp, Linkedin, Phone, Mail } from "lucide-react";
+import { ArrowDown, ArrowUp, Linkedin, Phone, Mail, ChevronLeft, ChevronRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 // Team types and component from team page
 interface TeamMember {
@@ -56,6 +57,7 @@ export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [currentSection, setCurrentSection] = useState("hero");
   const [navVisible, setNavVisible] = useState(true);
+  const [activeVersion, setActiveVersion] = useState(1); // Start with Version 1 (current) focused
 
   // Team members data
   const teamMembers: TeamMember[] = [
@@ -155,12 +157,98 @@ export default function Home() {
       observerMobile.observe(navMobile);
     }
 
+    // Center the news section on initial load
+    const newsSection = document.getElementById('news');
+    if (newsSection) {
+      const scrollContainer = newsSection.querySelector('.overflow-x-auto');
+      if (scrollContainer) {
+        // Center the container on Version 1 (current)
+        const containerWidth = scrollContainer.clientWidth;
+        const itemWidth = window.innerWidth >= 768 ? containerWidth * 0.45 : containerWidth * 0.9;
+        const gap = 32; // 8 * 4 (gap-8 in Tailwind)
+        const totalWidth = itemWidth + gap;
+        
+        // Calculate the exact position to center Version 1
+        // We want to position Version 1 in the center, so we need to scroll by one full item width plus gap
+        const scrollPosition = itemWidth + gap;
+        
+        // Apply the scroll position
+        scrollContainer.scrollLeft = scrollPosition;
+        
+        // Ensure Version 1 is focused after scrolling
+        setTimeout(() => {
+          setActiveVersion(1);
+        }, 100);
+      }
+    }
+
+    // Add scroll event listener for version boxes
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      const scrollLeft = target.scrollLeft;
+      const containerWidth = target.clientWidth;
+      const itemWidth = window.innerWidth >= 768 
+        ? containerWidth * 0.45  // 45% of container width on desktop
+        : containerWidth * 0.9;  // 90% of container width on mobile
+      const gap = 32; // 8 * 4 (gap-8 in Tailwind)
+      const totalWidth = itemWidth + gap;
+      
+      // Calculate which version is currently centered
+      const centerPosition = scrollLeft + containerWidth / 2;
+      const version = Math.round(centerPosition / totalWidth);
+      setActiveVersion(Math.max(0, Math.min(2, version))); // Clamp between 0 and 2
+    };
+
+    const scrollContainer = document.querySelector('.overflow-x-auto');
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
+
     return () => {
       window.removeEventListener("scroll", checkScrollPosition);
       if (observer && nav) observer.unobserve(nav);
       if (observerMobile && navMobile) observerMobile.unobserve(navMobile);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
     };
   }, []);
+
+  // Add intersection observer to handle section visibility
+  useEffect(() => {
+    const newsSection = document.getElementById('news');
+    if (newsSection) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // When news section becomes visible, center Version 1
+              const scrollContainer = entry.target.querySelector('.overflow-x-auto');
+              if (scrollContainer) {
+                const containerWidth = scrollContainer.clientWidth;
+                const itemWidth = window.innerWidth >= 768 ? containerWidth * 0.45 : containerWidth * 0.9;
+                const gap = 32;
+                const scrollPosition = itemWidth + gap;
+                scrollContainer.scrollLeft = scrollPosition;
+                setActiveVersion(1);
+              }
+            }
+          });
+        },
+        { threshold: 0.5 } // Trigger when section is 50% visible
+      );
+
+      observer.observe(newsSection);
+
+      return () => {
+        observer.unobserve(newsSection);
+      };
+    }
+  }, []);
+
+  const handleVersionChange = (version: number) => {
+    setActiveVersion(version);
+  };
 
   return (
     <main className="flex flex-col items-center bg-white text-black">
@@ -405,7 +493,7 @@ export default function Home() {
 
       {/* News Section */}
       <section id="news" className="w-full min-h-screen flex flex-col py-24 px-4 md:px-10 relative">
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto w-full h-full flex flex-col justify-center">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -419,27 +507,189 @@ export default function Home() {
           </motion.div>
           
           <motion.div
-            className="flex justify-center"
+            className="relative w-full"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <div className="p-6 border border-gray-200 rounded-lg bg-white max-w-2xl">
-              <h3 className="text-2xl font-bold mb-4 text-black">
-                {newsT("update1title")}
-              </h3>
-              <div className="space-y-4">
-                <p className="text-lg sm:text-xl leading-relaxed text-black">
-                  {newsT("update1paragraph1")}
-                </p>
-                <p className="text-lg sm:text-xl leading-relaxed text-black">
-                  {newsT("update1paragraph2")}
-                </p>
-                <p className="text-lg sm:text-xl leading-relaxed text-black">
-                  {newsT("update1paragraph3")}
-                </p>
+            {/* Mobile Carousel */}
+            <div className="md:hidden">
+              <Carousel
+                opts={{
+                  align: "center",
+                  loop: false,
+                  startIndex: 1,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {/* Version 0 */}
+                  <CarouselItem>
+                    <div className="w-full h-[520px] p-4 flex items-center justify-center">
+                      <div className="bg-white border border-gray-200 rounded-lg p-6 h-full w-full flex flex-col justify-center overflow-hidden">
+                        <div className="mb-4">
+                          <span className="text-sm font-semibold text-blue-600">
+                            {newsT("version0")}
+                          </span>
+                          <h3 className="text-xl font-bold text-black break-words">
+                            Initial Release
+                          </h3>
+                        </div>
+                        <div className="space-y-4">
+                          <p className="text-base text-black break-words">
+                            The first version of our platform introduced basic legal research capabilities and a simple user interface.
+                          </p>
+                          <p className="text-base text-black break-words">
+                            Users could search through Norwegian legal documents and get basic answers to their queries.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* Version 1 */}
+                  <CarouselItem>
+                    <div className="w-full h-[520px] p-4 flex items-center justify-center">
+                      <div className="bg-white border border-gray-200 rounded-lg p-6 h-full w-full flex flex-col justify-center overflow-hidden">
+                        <div className="mb-4">
+                          <span className="text-sm font-semibold text-blue-600">
+                            {newsT("version1")}
+                          </span>
+                          <h3 className="text-xl font-bold text-black break-words">
+                            {newsT("update1title")}
+                          </h3>
+                        </div>
+                        <div className="space-y-4">
+                          <p className="text-base leading-relaxed text-black break-words">
+                            {newsT("update1paragraph1")}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* Version 2 */}
+                  <CarouselItem>
+                    <div className="w-full h-[520px] p-4 flex items-center justify-center">
+                      <div className="bg-white border border-gray-200 rounded-lg p-6 h-full w-full flex flex-col justify-center overflow-hidden">
+                        <div className="mb-4">
+                          <span className="text-sm font-semibold text-blue-600">
+                            {newsT("version2")}
+                          </span>
+                          <h3 className="text-xl font-bold text-black break-words">
+                            Advanced AI Integration
+                          </h3>
+                        </div>
+                        <div className="space-y-4">
+                          <p className="text-base text-black break-words">
+                            Our upcoming version will feature enhanced AI capabilities with improved accuracy and faster response times.
+                          </p>
+                          <p className="text-base text-black break-words">
+                            New features will include advanced legal analysis, case prediction, and personalized recommendations.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden md:flex items-center justify-center gap-8 relative px-12 md:px-0">
+              {/* Version 0 Box */}
+              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+                activeVersion === 0 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
+              }`}>
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                  activeVersion === 0 ? 'shadow-lg' : ''
+                }`}>
+                  <div className="mb-4">
+                    <span className={`text-sm font-semibold ${activeVersion === 0 ? 'text-blue-600' : 'text-gray-500'}`}>
+                      {newsT("version0")}
+                    </span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
+                      Initial Release
+                    </h3>
+                  </div>
+                  <div className="space-y-4">
+                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
+                      The first version of our platform introduced basic legal research capabilities and a simple user interface.
+                    </p>
+                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
+                      Users could search through Norwegian legal documents and get basic answers to their queries.
+                    </p>
+                  </div>
+                </div>
               </div>
+
+              {/* Version 1 Box (Current) */}
+              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+                activeVersion === 1 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
+              }`}>
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                  activeVersion === 1 ? 'shadow-lg' : ''
+                }`}>
+                  <div className="mb-4">
+                    <span className={`text-sm font-semibold ${activeVersion === 1 ? 'text-blue-600' : 'text-gray-500'}`}>
+                      {newsT("version1")}
+                    </span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>
+                      {newsT("update1title")}
+                    </h3>
+                  </div>
+                  <div className="space-y-4">
+                    <p className={`text-base md:text-lg leading-relaxed ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>
+                      {newsT("update1paragraph1")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Version 2 Box */}
+              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+                activeVersion === 2 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
+              }`}>
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                  activeVersion === 2 ? 'shadow-lg' : ''
+                }`}>
+                  <div className="mb-4">
+                    <span className={`text-sm font-semibold ${activeVersion === 2 ? 'text-blue-600' : 'text-gray-500'}`}>
+                      {newsT("version2")}
+                    </span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
+                      Advanced AI Integration
+                    </h3>
+                  </div>
+                  <div className="space-y-4">
+                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
+                      Our upcoming version will feature enhanced AI capabilities with improved accuracy and faster response times.
+                    </p>
+                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
+                      New features will include advanced legal analysis, case prediction, and personalized recommendations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Arrows */}
+              <button 
+                onClick={() => handleVersionChange(activeVersion === 0 ? 2 : activeVersion - 1)}
+                className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all duration-300 z-10"
+                aria-label="View previous version"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-600" />
+              </button>
+              <button 
+                onClick={() => handleVersionChange(activeVersion === 2 ? 0 : activeVersion + 1)}
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all duration-300 z-10"
+                aria-label="View next version"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-600" />
+              </button>
             </div>
           </motion.div>
         </div>

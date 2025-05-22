@@ -23,13 +23,19 @@ const TeamMemberCard: React.FC<TeamMember> = ({
   image,
 }) => (
   <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 p-6">
-    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 border border-gray-200">
+    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 border border-gray-200 bg-gray-200">
       <Image
         src={image}
         alt={name}
         width={128}
         height={128}
-        className="object-cover w-full h-full"
+        className={`object-cover w-full h-full ${
+          name === "Bror Dahle" 
+            ? "scale-125 translate-y-3" 
+            : name === "Domantas Sakalys" || name === "Andreas Massey"
+            ? "translate-y-1"
+            : ""
+        }`}
         priority
       />
     </div>
@@ -66,28 +72,35 @@ export default function Home() {
       role: teamT("andreasRole"),
       description: teamT("andreasDescription"),
       image:
-        "https://utfs.io/f/JqFuZqPU89d1DelZE5OEmNhHV7e80Wd4Xgt2kvq39JAnoxLM",
+        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1pLSKsaTFhRnDYmztaWgVOMelr17KuPyqfNZj",
     },
     {
       name: teamT("brorName"),
       role: teamT("brorRole"),
       description: teamT("brorDescription"),
       image:
-        "https://utfs.io/f/JqFuZqPU89d1pfumQEcTFhRnDYmztaWgVOMelr17KuPyqfNZ",
+        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1Lb6hP5AcQaGbsEUqvxR0PSOWKodV3yYBl6wH",
     },
     {
       name: teamT("domantasName"),
       role: teamT("domantasRole"),
       description: teamT("domantasDescription"),
       image:
-        "https://utfs.io/f/JqFuZqPU89d1vLLwoHnQPex4qoacVr0KXfFu3wsR9dj8mh5i",
+        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1i3q1mXh2AGd4fH9DmYR78KOEsF3zvbwqlIo5",
     },
     {
       name: teamT("tamasName"),
       role: teamT("tamasRole"),
       description: teamT("tamasDescription"),
       image:
-        "https://utfs.io/f/JqFuZqPU89d1DpLuIHOEmNhHV7e80Wd4Xgt2kvq39JAnoxLM",
+        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1AetFrnVcX7C0Y5PqVNoQR4x6iLJUsEnwdzy1",
+    },
+    {
+      name: teamT("jonasName"),
+      role: teamT("jonasRole"),
+      description: teamT("jonasDescription"),
+      image:
+        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d14tAQnuarA7K1ScW5y2HICsfaJz8nZ6eETPom",
     },
   ];
 
@@ -469,8 +482,8 @@ export default function Home() {
                       <p className="text-base mb-6">{teamT("purposeOverview")}</p>
                     </div>
                     
-                    <div className="border border-gray-200 rounded-lg p-6 text-black">
-                      <h3 className="text-2xl font-bold mb-3">
+                    <div className="border border-gray-200 rounded-lg p-6 text-black flex flex-col items-center justify-center">
+                      <h3 className="text-2xl font-bold mb-3 w-full">
                         {teamT("ourValues")}
                       </h3>
                       <p className="text-base">{teamT("valuesOverview")}</p>

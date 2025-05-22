@@ -7,10 +7,13 @@
     "aboutUs": "About us",
     "aboutUsDescription": "Get to know us",
     "aboutUsOverview": "Our team consists of four talented men with backgrounds in law, machine learning, and information technology.",
-    "brorDescription": "Bror Dahle is a co-founder, COO and CLO of Servanda, where he manages daily operations, handles contracts, financing and recruitment. With a solid background in psychology and law, he brings analytical precision and legal insight to the company. He is pursuing a professional degree in psychology and a master's degree in law, while working as a case officer at the Norwegian Board of Health Supervision, where he ensures thorough assessments in complex cases. His broad expertise contributes to both strategic growth and legal security in Servanda.",
+    "brorDescription": "Bror Dahle is a co-founder and CLO of Servanda, where he manages daily operations, handles contracts, financing and recruitment. With a solid background in psychology and law, he brings analytical precision and legal insight to the company. He is pursuing a professional degree in psychology and a master's degree in law, while working as a case officer at the Norwegian Board of Health Supervision, where he ensures thorough assessments in complex cases. His broad expertise contributes to both strategic growth and legal security in Servanda.",
     "andreasDescription": "Andreas Massey is a co-founder, CEO and CTO of Servanda, where he leads both the company's strategic direction and technological development. He combines his expertise in cognitive neuroscience and machine learning to build innovative solutions and ensure a strong team with good dynamics. With a master's degree from UiO and an ongoing PhD in machine learning at NMBU, he drives Servanda forward with a keen eye for both technology and business development.",
     "tamasDescription": "Tamas Vicze is a co-owner and fullstack developer at Servanda, where he creates intuitive and seamless user experiences across websites, applications, and modules. He works full-time as a developer at Kristiania University College and has specialization in C#, .NET, and MSSQL through AW Academy. With experience from Convene and Konica Minolta Nordics, he brings solid technical expertise and a practical approach to modern web development.",
     "domantasDescription": "Domantas Sakalys is a co-owner and machine learning developer at Servanda, where he develops advanced language models for both businesses and consumers. He ensures that the models are not only efficient but also safe to use, with continuous monitoring and optimization. With a background in physics from UiO and an ongoing master's degree in data science at NMBU, he combines analytical precision with practical AI development to create robust and innovative solutions.",
+    "jonasName": "Jonas Kloster",
+    "jonasRole": "Co-owner, COO",
+    "jonasDescription": "Jonas is a co-owner and COO of Servanda, responsible for daily operations, customer contact, financing, and events. He holds a bachelor's degree in entrepreneurship, economics, and administration from OsloMet, along with leadership experience from the Norwegian Armed Forces as a team leader, squad leader, and corporal. Previously, he founded SHM Dynamics and secured STUD.ENT. funding from Innovation Norway. In addition to his role at Servanda, he works part-time as an event lead at SEFiO and as a client director at Oslo Analytics. Servanda benefits from Jonas's solid leadership skills, investor network, and his drive to create new and better solutions.",
     "purposeOverview": "Servanda works to democratize the law by making it more accessible, efficient, and understandable. Accessibility has long been limited due to expensive lawyers, making the law economically inaccessible for many, with prices ranging from 800 to 6000 NOK per hour for legal assistance (DN, 2024). Even if you can afford legal services, the process takes at least a few weeks, and it is often even slower in government agencies. For example, the estimated processing time for free legal aid in Oslo and Viken is 7–9 weeks (Statsforvalteren i Oslo og Viken, n.d.). A common consumer saves both time and money by diving into legal literature to find their own answers, but this is rarely done in an afternoon without challenges. Norwegian laws and regulations are written in various language forms such as Bokmål, Nynorsk, and Old Norwegian without overlap. Additionally, Norwegian law contains many legally specific terms that ordinary consumers are not familiar with. To increase accessibility, we will create a legal model that everyone can access via a mobile application or on our website, ensuring that everyone with internet access can use our model. To minimize the processing time of legal issues, we use an optimized model that can provide quick answers to complex questions, reducing the processing time for standard legal disputes by at least 100 times. To make the law more understandable, our model converts heavy technical terms into simpler language that makes more sense to consumers. If the model uses difficult technical terms, they are also explained continuously.",
     "valuesOverview": "Servanda is committed to achieving the lowest possible emissions for the operation and training of our models. Therefore, we use renewable Norwegian energy through Norwegian data centers. The safety of our users is central to our process. To ensure this, we guarantee that your data on our platforms is protected and not shared with third parties. This gives you full control over your exposure without risk. You also have the option to delete your data, such as chat history, if you wish. We will also take steps to comply with the EU's AI regulation, as well as implement methods such as red teaming, constant monitoring of the model's performance, and possibly a kill switch.",
     "ourTeam": "Our team",
@@ -20,7 +23,7 @@
     "andreasName": "Andreas Massey",
     "andreasRole": "Co-founder, CEO, CTO",
     "brorName": "Bror Dahle",
-    "brorRole": "Co-founder, COO, CLO",
+    "brorRole": "Co-founder, CLO",
     "domantasName": "Domantas Sakalys",
     "domantasRole": "Co-owner, ML developer",
     "tamasName": "Tamas Vicze",
@@ -63,7 +66,7 @@
     "tabs": {
       "general": "General",
       "lovboka": "Lovboka",
-      "juridisk-db": "Juridisk DB"
+      "juridisk-db": "NorLEX"
     },
     "general": {
       "intro": "At Servanda AS, we take privacy and data security seriously. We have implemented strict procedures and technological measures to ensure that all information is handled safely and responsibly. We follow industry standards and regulations such as GDPR and NIS2, and we conduct regular security audits and penetration tests to ensure our systems meet the strictest requirements.",
@@ -80,7 +83,7 @@
       "encryptionPoint3": "Zero Trust access model: Only authorized users with necessary rights have access to specific datasets."
     },
     "juridisk-db": {
-      "databaseSecurity": "Securing the Vector Database (Juridisk DB)",
+      "databaseSecurity": "Securing the Vector Database (NorLEX)",
       "securityPoint1": "RBAC (Role-Based Access Control): Access is controlled by roles and minimal necessity principle.",
       "securityPoint2": "API tokens with limited lifetime: Database access requires authentication via short-lived, secure tokens.",
       "securityPoint3": "Anomaly Detection and Intrusion Detection System (IDS): Monitors unusual queries and potential intrusion attempts.",
@@ -156,16 +159,16 @@
     "readLess": "Read less",
     "next": "Next",
     "previous": "Previous",
-    "juridisk-db": "Juridisk DB",
+    "juridisk-db": "NorLEX",
     "juridisk-dbDescription": "Legal database for AI"
   },
   "JuridiskDB": {
-    "title": "Juridisk DB",
+    "title": "NorLEX",
     "subtitle": "Comprehensive and continuously updated",
-    "overview": "JuridiskDB is a comprehensive and continuously updated legal database that collects the most important legal sources in Norwegian legislation. It provides access to general laws and regulations, which are updated daily, as well as legislative preparatory works from the Parliament and case law from the Supreme Court.",
+    "overview": "NorLEX is a comprehensive and continuously updated legal database that collects the most important legal sources in Norwegian legislation. It provides access to general laws and regulations, which are updated daily, as well as legislative preparatory works from the Parliament and case law from the Supreme Court.",
     "purpose": "This collection provides a holistic and updated foundation for legal analyses and model development, simplifying access to accurate, verified, and consolidated legal sources without the need for time-consuming data collection.",
     "uniqueAccessTitle": "Unique Access for AI Developers and Lawyers",
-    "uniqueAccessContent": "JuridiskDB is specifically developed for use in legal AI models, research, and automated analyses. With this database, developers and lawyers can:",
+    "uniqueAccessContent": "NorLEX is specifically developed for use in legal AI models, research, and automated analyses. With this database, developers and lawyers can:",
     "bulletPoint1": "Avoid high costs and license restrictions from competitors.",
     "bulletPoint2": "Get structured and searchable legal data without manual consolidation.",
     "bulletPoint3": "Integrate real-time updated legal sources in machine learning, RAG models, or other AI systems.",
@@ -174,6 +177,6 @@
     "securityPoint1": "All sources are verified and automatically updated to ensure compliance with current law.",
     "securityPoint2": "Data is stored with AES-256 encryption and secured with RBAC access control to protect against unauthorized access.",
     "securityPoint3": "API access with modern authentication provides safe and efficient integration with AI systems and legal analysis tools.",
-    "conclusion": "With JuridiskDB, you get simple, secure, and cost-effective access to Norway's most comprehensive legal data foundation, without the usual hassle of data management and updates."
+    "conclusion": "With NorLEX, you get simple, secure, and cost-effective access to Norway's most comprehensive legal data foundation, without the usual hassle of data management and updates."
   }
 }

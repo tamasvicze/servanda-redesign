@@ -22,7 +22,7 @@ const TeamMemberCard: React.FC<TeamMember> = ({
   description,
   image,
 }) => (
-  <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 p-6">
+  <div className="flex flex-row items-start space-x-6 p-4 border-b border-gray-200 last:border-b-0">
     <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 border border-gray-200 bg-gray-200">
       <Image
         src={image}
@@ -266,7 +266,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center bg-white text-black">
       {/* Hero Section */}
-      <section id="hero" className="w-full min-h-screen flex flex-col items-center justify-center py-24 px-4 relative">
+      <section id="hero" className="w-full min-h-screen flex flex-col items-center justify-center py-12 px-4 relative">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-black">
             {homeT("servanda")}
@@ -421,10 +421,10 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="w-full min-h-screen flex flex-col py-24 px-4 md:px-10 relative">
+      <section id="team" className="w-full min-h-screen flex flex-col py-12 px-4 md:px-10 relative">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -443,16 +443,16 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <Tabs defaultValue="team" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 h-20 rounded-t-lg bg-gray-100">
+              <TabsList className="grid w-full grid-cols-2 h-16 rounded-t-lg bg-gray-100">
                 <TabsTrigger
                   value="team"
-                  className="text-lg font-semibold py-6 text-black"
+                  className="text-lg font-semibold py-4 text-black"
                 >
                   {teamT("ourTeam")}
                 </TabsTrigger>
                 <TabsTrigger
                   value="purpose-values"
-                  className="text-lg font-semibold py-6 text-black"
+                  className="text-lg font-semibold py-4 text-black"
                 >
                   {teamT("ourPurposeAndValues")}
                 </TabsTrigger>
@@ -463,7 +463,7 @@ export default function Home() {
                   value="team"
                   className="mt-0 p-4"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
+                  <div className="flex flex-col space-y-2 text-black">
                     {teamMembers.map((member, index) => (
                       <TeamMemberCard key={index} {...member} />
                     ))}
@@ -614,7 +614,7 @@ export default function Home() {
             {/* Desktop Layout */}
             <div className="hidden md:flex items-center justify-center gap-8 relative px-12 md:px-0">
               {/* Version 0 Box */}
-              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
                 activeVersion === 0 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
                 <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
@@ -640,7 +640,7 @@ export default function Home() {
               </div>
 
               {/* Version 1 Box (Current) */}
-              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
                 activeVersion === 1 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
                 <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
@@ -663,7 +663,7 @@ export default function Home() {
               </div>
 
               {/* Version 2 Box */}
-              <div className={`w-[45%] h-[calc(100vh-24rem)] transition-all duration-300 ${
+              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
                 activeVersion === 2 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
                 <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
@@ -706,16 +706,6 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-        
-        {currentSection === "news" && (
-          <button 
-            onClick={() => handleScroll("contact")}
-            className="absolute bottom-8 right-8 cursor-pointer hidden md:block"
-            aria-label="Scroll to contact section"
-          >
-            <ArrowDown size={32} className="text-black" />
-          </button>
-        )}
       </section>
 
       {/* Contact Section */}
@@ -800,134 +790,5 @@ export default function Home() {
         )}
       </AnimatePresence>
     </main>
-  );
-}
-
-// Hexagon item for team member
-interface HexItemProps {
-  member: TeamMember;
-  hexPos: number;
-}
-function HexItem({ member, hexPos }: HexItemProps) {
-  // Hexagon positions (clockwise from top, 0-5)
-  const positions = [
-    { left: '50%', top: '0%', translate: '-50%, 0%' }, // top
-    { left: '100%', top: '25%', translate: '-100%, -50%' }, // top right
-    { left: '100%', top: '75%', translate: '-100%, -50%' }, // bottom right
-    { left: '50%', top: '100%', translate: '-50%, -100%' }, // bottom
-    { left: '0%', top: '75%', translate: '0%, -50%' }, // bottom left
-    { left: '0%', top: '25%', translate: '0%, -50%' }, // top left
-  ];
-  const pos = positions[hexPos];
-  const [hover, setHover] = React.useState(false);
-  return (
-    <div
-      className="absolute flex flex-col items-center justify-center cursor-pointer transition-transform duration-300"
-      style={{ left: pos.left, top: pos.top, transform: `translate(${pos.translate})` }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      tabIndex={0}
-      onFocus={() => setHover(true)}
-      onBlur={() => setHover(false)}
-    >
-      <div className={`rounded-full overflow-hidden border-4 border-gray-200 shadow-lg w-32 h-32 md:w-40 md:h-40 bg-white transition-all duration-300 ${hover ? 'scale-110 z-10' : ''}`}
-        style={{ position: 'relative' }}
-      >
-        <Image src={member.image} alt={member.name} width={128} height={128} className="object-cover w-full h-full" />
-        {hover && (
-          <PopoutBox hexPos={hexPos} name={member.name} role={member.role} description={member.description} />
-        )}
-      </div>
-    </div>
-  );
-}
-
-// Hexagon item for icon (purpose/values)
-interface HexIconItemProps {
-  type: string;
-  title: string;
-  text: string;
-}
-function HexIconItem({ type, title, text }: HexIconItemProps) {
-  // Hexagon positions (clockwise from top, 0-5)
-  const positions = [
-    { left: '50%', top: '0%', translate: '-50%, 0%' }, // top
-    { left: '100%', top: '25%', translate: '-100%, -50%' }, // top right
-    { left: '100%', top: '75%', translate: '-100%, -50%' }, // bottom right
-    { left: '50%', top: '100%', translate: '-50%, -100%' }, // bottom
-    { left: '0%', top: '75%', translate: '0%, -50%' }, // bottom left
-    { left: '0%', top: '25%', translate: '0%, -50%' }, // top left
-  ];
-  const pos = positions[type === 'purpose' ? 1 : 4];
-  const [hover, setHover] = React.useState(false);
-  return (
-    <div
-      className="absolute flex flex-col items-center justify-center cursor-pointer transition-transform duration-300"
-      style={{ left: pos.left, top: pos.top, transform: `translate(${pos.translate})` }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      tabIndex={0}
-      onFocus={() => setHover(true)}
-      onBlur={() => setHover(false)}
-    >
-      <div className={`rounded-full bg-gradient-to-br ${type === 'purpose' ? 'from-blue-400 to-blue-600' : 'from-orange-400 to-yellow-400'} flex items-center justify-center w-32 h-32 md:w-40 md:h-40 shadow-lg transition-all duration-300 ${hover ? 'scale-110 z-10' : ''}`}
-        style={{ position: 'relative' }}
-      >
-        {type === 'purpose' ? (
-          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" stroke="#fff" strokeWidth="4" /><path d="M18 10v8l6 4" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        ) : (
-          <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><path d="M18 32s-9-7.5-9-13.5A6 6 0 0 1 18 12a6 6 0 0 1 9 6.5C27 24.5 18 32 18 32Z" stroke="#fff" strokeWidth="3" fill="none"/></svg>
-        )}
-        {hover && (
-          <div className="absolute inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center p-4 z-20 rounded-full shadow-xl">
-            <h3 className="text-lg font-bold mb-1 text-black text-center whitespace-normal break-words">{title}</h3>
-            <p className="text-xs text-black text-center whitespace-normal break-words">{text}</p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-// Popout box for team member description
-interface PopoutBoxProps {
-  hexPos: number;
-  name: string;
-  role: string;
-  description: string;
-}
-function PopoutBox({ hexPos, name, role, description }: PopoutBoxProps) {
-  // Directions for popout based on hex position (0,2,3,5)
-  // 0: top, 2: right, 3: bottom, 5: left
-  const directions: Record<number, any> = {
-    0: { justify: 'items-center', top: '-80px', left: '50%', translate: '-50%, -100%', arrow: 'down' }, // top
-    2: { justify: 'items-start', top: '50%', left: 'calc(100% + 16px)', translate: '0, -50%', arrow: 'left' }, // right
-    3: { justify: 'items-center', top: 'calc(100% + 16px)', left: '50%', translate: '-50%, 0', arrow: 'up' }, // bottom
-    5: { justify: 'items-end', top: '50%', left: '-16px', translate: '-100%, -50%', arrow: 'right' }, // left
-  };
-  const pos = directions[hexPos];
-  return (
-    <div
-      className={`absolute z-30 w-[220px] md:w-[300px] bg-white bg-opacity-95 rounded-xl shadow-2xl p-4 border border-gray-200 flex flex-col items-center whitespace-normal break-words ${pos.justify}`}
-      style={{ top: pos.top, left: pos.left, transform: `translate(${pos.translate})` }}
-    >
-      {/* Arrow */}
-      <div className="absolute" style={{
-        left: pos.arrow === 'down' || pos.arrow === 'up' ? '50%' : pos.arrow === 'left' ? '-12px' : 'auto',
-        right: pos.arrow === 'right' ? '-12px' : 'auto',
-        top: pos.arrow === 'down' ? '100%' : pos.arrow === 'up' ? '-12px' : pos.arrow === 'left' || pos.arrow === 'right' ? '50%' : 'auto',
-        transform: pos.arrow === 'down' ? 'translateX(-50%)' : pos.arrow === 'up' ? 'translateX(-50%)' : 'translateY(-50%)',
-      }}>
-        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {pos.arrow === 'down' && <polygon points="12,0 24,12 0,12" fill="#fff" stroke="#e5e7eb" strokeWidth="1" />}
-          {pos.arrow === 'up' && <polygon points="0,0 24,0 12,12" fill="#fff" stroke="#e5e7eb" strokeWidth="1" />}
-          {pos.arrow === 'left' && <polygon points="0,6 12,0 12,12" fill="#fff" stroke="#e5e7eb" strokeWidth="1" />}
-          {pos.arrow === 'right' && <polygon points="12,0 24,6 12,12" fill="#fff" stroke="#e5e7eb" strokeWidth="1" />}
-        </svg>
-      </div>
-      <h3 className="text-lg font-bold mb-1 text-black text-center whitespace-normal break-words">{name}</h3>
-      <p className="text-xs text-gray-600 mb-1 text-center whitespace-normal break-words">{role}</p>
-      <p className="text-xs text-black text-center whitespace-normal break-words">{description}</p>
-    </div>
   );
 }

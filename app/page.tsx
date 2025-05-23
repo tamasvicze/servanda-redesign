@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowDown, ArrowUp, Linkedin, Phone, Mail, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 // Team types and component from team page
 interface TeamMember {
@@ -40,12 +41,30 @@ const TeamMemberCard: React.FC<TeamMember> = ({
       />
     </div>
     <div className="flex-1">
-      <div className="p-0">
-        <h3 className="text-2xl font-semibold">{name}</h3>
-        <p className="text-base text-gray-600">{role}</p>
+      {/* Mobile Collapsible View */}
+      <div className="md:hidden">
+        <Collapsible>
+          <CollapsibleTrigger className="w-full text-left">
+            <div className="p-0">
+              <h3 className="text-2xl font-semibold">{name}</h3>
+              <p className="text-base text-gray-600">{role}</p>
+            </div>
+          </CollapsibleTrigger>
+          <CollapsibleContent className="p-0 mt-2">
+            <p className="text-base">{description}</p>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
-      <div className="p-0 mt-2">
-        <p className="text-base">{description}</p>
+
+      {/* Desktop/Laptop View */}
+      <div className="hidden md:block">
+        <div className="p-0">
+          <h3 className="text-2xl font-semibold">{name}</h3>
+          <p className="text-base text-gray-600">{role}</p>
+        </div>
+        <div className="p-0 mt-2">
+          <p className="text-base">{description}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -556,7 +575,7 @@ export default function Home() {
                     </div>
                   </CarouselItem>
 
-                  {/* Version 1 */}
+                  {/* Version 1 (Current) */}
                   <CarouselItem>
                     <div className="w-full h-[520px] p-4 flex items-center justify-center">
                       <div className="bg-white border border-gray-200 rounded-lg p-6 h-full w-full flex flex-col justify-center overflow-hidden">

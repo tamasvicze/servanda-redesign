@@ -609,76 +609,54 @@ export default function Home() {
             {/* Desktop Layout */}
             <div className="hidden md:flex items-center justify-center gap-8 relative px-12 md:px-0">
               {/* Version 0 Box */}
-              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
+              <div className={`w-[45%] min-h-[320px] md:min-h-[400px] lg:min-h-[480px] max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] transition-all duration-300 ${
                 activeVersion === 0 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
-                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full flex flex-col transition-all duration-300 ${
                   activeVersion === 0 ? 'shadow-lg' : ''
                 }`}>
                   <div className="mb-4">
-                    <span className={`text-sm font-semibold ${activeVersion === 0 ? 'text-blue-600' : 'text-gray-500'}`}>
-                      {newsT("version0")}
-                    </span>
-                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
-                      Initial Release
-                    </h3>
+                    <span className={`text-sm font-semibold ${activeVersion === 0 ? 'text-blue-600' : 'text-gray-500'}`}>{newsT("version0")}</span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>Initial Release</h3>
                   </div>
-                  <div className="space-y-4">
-                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
-                      The first version of our platform introduced basic legal research capabilities and a simple user interface.
-                    </p>
-                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>
-                      Users could search through Norwegian legal documents and get basic answers to their queries.
-                    </p>
+                  <div className="space-y-4 overflow-y-auto flex-1 flex flex-col">
+                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>The first version of our platform introduced basic legal research capabilities and a simple user interface.</p>
+                    <p className={`text-base md:text-lg ${activeVersion === 0 ? 'text-black' : 'text-gray-400'}`}>Users could search through Norwegian legal documents and get basic answers to their queries.</p>
                   </div>
                 </div>
               </div>
 
               {/* Version 1 Box (Current) */}
-              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
+              <div className={`w-[45%] min-h-[320px] md:min-h-[400px] lg:min-h-[480px] max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] transition-all duration-300 ${
                 activeVersion === 1 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
-                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full flex flex-col transition-all duration-300 ${
                   activeVersion === 1 ? 'shadow-lg' : ''
                 }`}>
                   <div className="mb-4">
-                    <span className={`text-sm font-semibold ${activeVersion === 1 ? 'text-blue-600' : 'text-gray-500'}`}>
-                      {newsT("version1")}
-                    </span>
-                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>
-                      {newsT("update1title")}
-                    </h3>
+                    <span className={`text-sm font-semibold ${activeVersion === 1 ? 'text-blue-600' : 'text-gray-500'}`}>{newsT("version1")}</span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>{newsT("update1title")}</h3>
                   </div>
-                  <div className="space-y-4">
-                    <p className={`text-base md:text-lg leading-relaxed ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>
-                      {newsT("update1paragraph1")}
-                    </p>
+                  <div className="space-y-4 overflow-y-auto flex-1 flex flex-col">
+                    <p className={`text-base md:text-lg leading-relaxed ${activeVersion === 1 ? 'text-black' : 'text-gray-400'}`}>{newsT("update1paragraph1")}</p>
                   </div>
                 </div>
               </div>
 
               {/* Version 2 Box */}
-              <div className={`w-[45%] h-[calc(100vh-36rem)] transition-all duration-300 ${
+              <div className={`w-[45%] min-h-[320px] md:min-h-[400px] lg:min-h-[480px] max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] transition-all duration-300 ${
                 activeVersion === 2 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
               }`}>
-                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full transition-all duration-300 ${
+                <div className={`bg-white border border-gray-200 rounded-lg p-8 h-full flex flex-col transition-all duration-300 ${
                   activeVersion === 2 ? 'shadow-lg' : ''
                 }`}>
                   <div className="mb-4">
-                    <span className={`text-sm font-semibold ${activeVersion === 2 ? 'text-blue-600' : 'text-gray-500'}`}>
-                      {newsT("version2")}
-                    </span>
-                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
-                      Advanced AI Integration
-                    </h3>
+                    <span className={`text-sm font-semibold ${activeVersion === 2 ? 'text-blue-600' : 'text-gray-500'}`}>{newsT("version2")}</span>
+                    <h3 className={`text-xl md:text-2xl font-bold ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>Advanced AI Integration</h3>
                   </div>
-                  <div className="space-y-4">
-                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
-                      Our upcoming version will feature enhanced AI capabilities with improved accuracy and faster response times.
-                    </p>
-                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>
-                      New features will include advanced legal analysis, case prediction, and personalized recommendations.
-                    </p>
+                  <div className="space-y-4 overflow-y-auto flex-1 flex flex-col">
+                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>Our upcoming version will feature enhanced AI capabilities with improved accuracy and faster response times.</p>
+                    <p className={`text-base md:text-lg ${activeVersion === 2 ? 'text-black' : 'text-gray-400'}`}>New features will include advanced legal analysis, case prediction, and personalized recommendations.</p>
                   </div>
                 </div>
               </div>

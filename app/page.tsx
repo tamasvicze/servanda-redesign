@@ -281,13 +281,25 @@ export default function Home() {
     <main className="flex flex-col items-center bg-white text-black">
       {/* Hero Section */}
       <section id="hero" className="w-full min-h-screen flex flex-col items-center justify-center py-12 px-4 relative">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mb-8">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-black">
             {homeT("servanda")}
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-700">
             {homeT("servandaMotto")}
           </p>
+        </div>
+        
+        {/* Canva Presentation */}
+        <div className="w-full max-w-4xl mx-auto">
+          <div className="relative w-full h-0 pt-[56.25%] pb-0 shadow-lg mt-6 mb-4 overflow-hidden rounded-lg will-change-transform">
+            <iframe 
+              loading="lazy" 
+              className="absolute w-full h-full top-0 left-0 border-none p-0 m-0"
+              src="https://www.canva.com/design/DAGoLLVTigw/kL9wJLS3DxxbArCL-tbI-Q/view?embed" 
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 

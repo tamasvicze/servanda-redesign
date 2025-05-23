@@ -71,36 +71,31 @@ export default function Home() {
       name: teamT("andreasName"),
       role: teamT("andreasRole"),
       description: teamT("andreasDescription"),
-      image:
-        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1pLSKsaTFhRnDYmztaWgVOMelr17KuPyqfNZj",
+      image: "/images/andreas-transparent.png",
     },
     {
       name: teamT("brorName"),
       role: teamT("brorRole"),
       description: teamT("brorDescription"),
-      image:
-        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1Lb6hP5AcQaGbsEUqvxR0PSOWKodV3yYBl6wH",
+      image: "/images/bror-transparent.png",
     },
     {
       name: teamT("domantasName"),
       role: teamT("domantasRole"),
       description: teamT("domantasDescription"),
-      image:
-        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1i3q1mXh2AGd4fH9DmYR78KOEsF3zvbwqlIo5",
+      image: "/images/domantas-transparent.png",
     },
     {
       name: teamT("tamasName"),
       role: teamT("tamasRole"),
       description: teamT("tamasDescription"),
-      image:
-        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d1AetFrnVcX7C0Y5PqVNoQR4x6iLJUsEnwdzy1",
+      image: "/images/tamas-transparent.png",
     },
     {
       name: teamT("jonasName"),
       role: teamT("jonasRole"),
       description: teamT("jonasDescription"),
-      image:
-        "https://qm0wudcqxx.ufs.sh/f/JqFuZqPU89d14tAQnuarA7K1ScW5y2HICsfaJz8nZ6eETPom",
+      image: "/images/jonas-transparent.png",
     },
   ];
 

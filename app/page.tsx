@@ -23,50 +23,47 @@ const TeamMemberCard: React.FC<TeamMember> = ({
   description,
   image,
 }) => (
-  <div className="flex flex-row items-start space-x-6 p-4 border-b border-gray-200 last:border-b-0">
-    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 border border-gray-200 bg-gray-200">
-      <Image
-        src={image}
-        alt={name}
-        width={128}
-        height={128}
-        className={`object-cover w-full h-full ${
-          name === "Bror Dahle" 
-            ? "scale-125 translate-y-3" 
-            : name === "Domantas Sakalys" || name === "Andreas Massey"
-            ? "translate-y-1"
-            : ""
-        }`}
-        priority
-      />
-    </div>
-    <div className="flex-1">
-      {/* Mobile Collapsible View */}
-      <div className="md:hidden">
-        <Collapsible>
-          <CollapsibleTrigger className="w-full text-left">
+  <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 p-4 border-b border-gray-200 last:border-b-0">
+    <Collapsible className="w-full md:w-auto">
+      <CollapsibleTrigger className="w-full md:w-auto flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 border border-gray-200 bg-gray-200">
+          <Image
+            src={image}
+            alt={name}
+            width={128}
+            height={128}
+            className={`object-cover w-full h-full ${
+              name === "Bror Dahle" 
+                ? "scale-125 translate-y-3" 
+                : name === "Domantas Sakalys" || name === "Andreas Massey"
+                ? "translate-y-1"
+                : ""
+            }`}
+            priority
+          />
+        </div>
+        <div className="flex-1 w-full text-center md:text-left">
+          {/* Mobile View */}
+          <div className="md:hidden">
             <div className="p-0">
               <h3 className="text-2xl font-semibold">{name}</h3>
               <p className="text-base text-gray-600">{role}</p>
             </div>
-          </CollapsibleTrigger>
-          <CollapsibleContent className="p-0 mt-2">
-            <p className="text-base">{description}</p>
-          </CollapsibleContent>
-        </Collapsible>
-      </div>
+          </div>
 
-      {/* Desktop/Laptop View */}
-      <div className="hidden md:block">
-        <div className="p-0">
-          <h3 className="text-2xl font-semibold">{name}</h3>
-          <p className="text-base text-gray-600">{role}</p>
+          {/* Desktop View */}
+          <div className="hidden md:block">
+            <div className="p-0">
+              <h3 className="text-2xl font-semibold">{name}</h3>
+              <p className="text-base text-gray-600">{role}</p>
+            </div>
+          </div>
         </div>
-        <div className="p-0 mt-2">
-          <p className="text-base">{description}</p>
-        </div>
-      </div>
-    </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="p-0 mt-2 w-full text-left">
+        <p className="text-base">{description}</p>
+      </CollapsibleContent>
+    </Collapsible>
   </div>
 );
 
